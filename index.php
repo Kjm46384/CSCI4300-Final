@@ -21,6 +21,12 @@
         $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
         $rows = mysqli_num_rows($result);
         if ($rows == 1) {
+            // create cookie data upon login: user cookie indicates which user is logged in by name
+            $cookie_name = "user";
+            $cookie_username = $username;
+            // "/" indicates that the cookie can be accessed by all pages in the directory
+            setcookie($cookie_name, $cookie_username, time() + (86400 * 30), "/");
+
             $_SESSION['username'] = $username;
             // Redirect to user dashboard page
             header("Location: dashboard.php");
