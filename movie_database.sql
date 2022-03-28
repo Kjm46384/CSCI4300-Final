@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 03, 2022 at 09:13 PM
+-- Generation Time: Mar 29, 2022 at 12:34 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.27
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `Login_System`
+-- Database: `movie_database`
 --
 
 -- --------------------------------------------------------
@@ -40,7 +40,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `create_datetime`) VALUES
-(1, 'kjm46384', 'kenyemays00@gmail.com', '308c5917542bdac8f7fcf994a87c7d42', '2022-03-03 21:01:18');
+(1, 'kjm46384', 'kenyemays00@gmail.com', '4648856bd5e8770f3154ea1bdb0d5b6f', '2022-03-03 21:01:18');
 
 --
 -- Indexes for dumped tables
