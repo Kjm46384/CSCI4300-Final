@@ -44,7 +44,6 @@
         <input type="password" class="login-input" name="password" placeholder="Password"/>
         <input type="submit" value="Login" name="submit" class="login-button"/>
         <p class="link"><a href="register.php">New Registration</a></p>
-        <p class="link-2"><a href="reset_password.php">Forgot My Password</a></p>
   </form>
 <?php
     }
