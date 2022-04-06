@@ -8,6 +8,7 @@ include("config.php");
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <title>Dashboard - Client Area</title>
     <link rel="stylesheet" href="css/dashboard.css" />
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
