@@ -32,7 +32,7 @@
             header("Location: dashboard.php");
         } else {
             echo "<div class='form'>
-                  <h3>Incorrect Username/password.</h3><br/>
+                  <h1 class='login-title'>Incorrect username and/or password.</h1><br/>
                   <p class='link'>Click here to <a href='index.php'>Login</a> again.</p>
                   </div>";
         }

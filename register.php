@@ -26,12 +26,12 @@
         $result   = mysqli_query($conn, $query);
         if ($result) {
             echo "<div class='form'>
-                  <h3>You are registered successfully.</h3><br/>
+                  <h1 class='login-title'>You are registered successfully.</h1><br/>
                   <p class='link'>Click here to <a href='index.php'>Login</a></p>
                   </div>";
         } else {
             echo "<div class='form'>
-                  <h3>Required fields are missing.</h3><br/>
+                  <h1 class='login-title'>Required fields are missing.</h1><br/>
                   <p class='link'>Click here to <a href='register.php'>registration</a> again.</p>
                   </div>";
         }
