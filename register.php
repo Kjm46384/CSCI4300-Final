@@ -5,6 +5,23 @@
     <meta charset="utf-8" />
     <title>Registration</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    	$(document).ready(function()
+    	{
+    		$("#show-password").click(function()
+    		{
+    			if($("#password").attr("type")=="password")
+    			{
+    				$("#password").attr("type","text");
+    			}
+    			else
+    			{
+    				$("#password").attr("type","password");
+    			}
+    		});
+    	});
+    </script>
 </head>
 
 <body>
@@ -41,24 +58,15 @@
             <h1 class="login-title">Registration</h1>
             <input type="text" class="login-input" name="username" placeholder="Username" required />
             <input type="text" class="login-input" name="email" placeholder="Email Adress">
-            <input type="password" class="login-input" name="password" placeholder="Password">
-            <input id="show-password" type="checkbox" onclick="myFunction()" /><label for="checkbox">Show Password</label>
+            <input type="password" class="login-input" name="password" placeholder="Password" id="password">
+            <input id="show-password" type="checkbox" /><label for="checkbox">Show Password</label>
+            <p></p>
             <input type="submit" name="submit" value="Register" class="login-button">
             <p class="link"><a href="index.php">Click to Login</a></p>
         </form>
     <?php
     }
     ?>
-    <script>
-        function myFunction() {
-            var x = document.getElementsByClassName("login-input");
-            if (x.type === "password") {
-                x.type = "text";
-            } else {
-                x.type = "password";
-            }
-        }
-    </script>
 </body>
 
 </html>
