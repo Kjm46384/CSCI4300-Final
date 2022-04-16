@@ -194,8 +194,15 @@ mysqli_close($conn);
 </div>
 
     <footer>
-        <p> &copy; 2022 University of Georgia; All Rights Reserved<br />
-        </p>
+    <div class="footer-bottom">
+            <p>copyright &copy; <a href="dashboard.php">Ticket-Master</a>  </p>
+                    <div class="footer-menu">
+                      <ul class="f-menu">
+                        <li><a href="">About</a></li>
+                        <li><a href="contact_us.php">Contact</a></li>
+                      </ul>
+                    </div>
+        </div>
     </footer>
     <script>
         var dd_main = document.querySelector(".dd_main");
