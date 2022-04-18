@@ -61,147 +61,133 @@ include "config.php";
             </a>
         </div>
         <?php $sql = "SELECT * FROM movies"; ?>
-<div class="primary-container">
-        <div id="home-section-1" class="movie-show-container">
-            <br />
-            <h1><b>Now Playing</b></h1>
-<div class="movie-container1">
-    <div class="row g-4">
-        <?php if ($result = mysqli_query($conn, $sql))
-{
-    if (mysqli_num_rows($result) > 0)
-    {
-        for ($i = 0;$i <= mysqli_num_rows($result) - 1;$i++)
-        {
-            $row = mysqli_fetch_array($result); ?>
-                    <div class="col">
-                        <div class="card" style="width: 30rem;">
-                            <div class="brightenEffect">
-                            <?php
-            echo '<a href="ticket_booking.php?id=', $row["movie_id"], '">';
-            echo '<img class="card-img-top" src="', $row["movie_img"], '" alt="Card image cap">';
-            echo '</a>';
-?>
-                            </div>
-                            <div class="card-body">
-                            <?php
-            echo '<h5 class="card-title">', $row["movie_title"], "</h5>";
-            echo '<p class="card-text">', $row["movie_genre"], "</p>";
-?>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                            Theater 1<br />
-                            <?php
-            echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=700pm&theater=1" class="btn btn-primary">7:00pm</a> ';
-            echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=830pm&theater=1" class="btn btn-primary">8:30pm</a> ';
-            echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=900pm&theater=1" class="btn btn-primary">9:00pm</a> ';
-?>
-                            </li>
-                            <li class="list-group-item">
-                            Theater 2<br />
-                            <?php
-            echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=700pm&theater=2" class="btn btn-primary">7:00pm</a> ';
-            echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=830pm&theater=2" class="btn btn-primary">8:30pm</a> ';
-            echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=900pm&theater=2" class="btn btn-primary">9:00pm</a> ';
-?>
-                            </li>
-                            <li class="list-group-item">
-                            Theater 3<br />
-                            <?php
-            echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=700pm&theater=3" class="btn btn-primary">7:00pm</a> ';
-            echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=830pm&theater=3" class="btn btn-primary">8:30pm</a> ';
-            echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=900pm&theater=3" class="btn btn-primary">9:00pm</a> ';
-?>
-                            </li>
-                            </ul>
-                            <div class="card-body">
-                            <?php echo '<a href="ticket_booking.php?id=', $row["movie_id"], '" class="card-link">See all theaters and showtimes...</a>'; ?>
-                            </div>
-                            </div>
-                            </div>
-                            <?php
-        }
-        mysqli_free_result($result);
-    }
-    else
-    {
-        echo '<h4 class="no-annot">No Booking to our movies right now</h4>';
-    }
-}
-else
-{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
-} ?>
+        <div class="primary-container">
+            <div id="home-section-1" class="movie-show-container">
+                <br />
+                <h1><b>Now Playing</b></h1>
+                <div class="movie-container1">
+                    <div class="row g-4">
+                        <?php if ($result = mysqli_query($conn, $sql)) {
+                            if (mysqli_num_rows($result) > 0) {
+                                for ($i = 0; $i <= mysqli_num_rows($result) - 1; $i++) {
+                                    $row = mysqli_fetch_array($result); ?>
+                                    <div class="col">
+                                        <div class="card" style="width: 30rem;">
+                                            <div class="brightenEffect">
+                                                <?php
+                                                echo '<a href="ticket_booking.php?id=', $row["movie_id"], '">';
+                                                echo '<img class="card-img-top" src="', $row["movie_img"], '" alt="Card image cap">';
+                                                echo '</a>';
+                                                ?>
+                                            </div>
+                                            <div class="card-body">
+                                                <?php
+                                                echo '<h5 class="card-title">', $row["movie_title"], "</h5>";
+                                                echo '<p class="card-text">', $row["movie_genre"], "</p>";
+                                                ?>
+                                            </div>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">
+                                                    Theater 1<br />
+                                                    <?php
+                                                    echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=700pm&theater=1" class="btn btn-primary">7:00pm</a> ';
+                                                    echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=830pm&theater=1" class="btn btn-primary">8:30pm</a> ';
+                                                    echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=900pm&theater=1" class="btn btn-primary">9:00pm</a> ';
+                                                    ?>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    Theater 2<br />
+                                                    <?php
+                                                    echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=700pm&theater=2" class="btn btn-primary">7:00pm</a> ';
+                                                    echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=830pm&theater=2" class="btn btn-primary">8:30pm</a> ';
+                                                    echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=900pm&theater=2" class="btn btn-primary">9:00pm</a> ';
+                                                    ?>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    Theater 3<br />
+                                                    <?php
+                                                    echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=700pm&theater=3" class="btn btn-primary">7:00pm</a> ';
+                                                    echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=830pm&theater=3" class="btn btn-primary">8:30pm</a> ';
+                                                    echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=900pm&theater=3" class="btn btn-primary">9:00pm</a> ';
+                                                    ?>
+                                                </li>
+                                            </ul>
+                                            <div class="card-body">
+                                                <?php echo '<a href="ticket_booking.php?id=', $row["movie_id"], '" class="card-link">See all theaters and showtimes...</a>'; ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                        <?php
+                                }
+                                mysqli_free_result($result);
+                            } else {
+                                echo '<h4 class="no-annot">No Booking to our movies right now</h4>';
+                            }
+                        } else {
+                            echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
+                        } ?>
 
-    </div>
-</div>
-<br />
-<hr>
-            <h1><b>Coming Soon</b></h1>
-            <div class="movies-container2">
-                <div class="row g-4">
-                <?php
-$sql2 = "SELECT * FROM movies_cs";
-if ($result2 = mysqli_query($conn, $sql2))
-{
-    if (mysqli_num_rows($result2) > 0)
-    {
-        for ($i = 0;$i <= mysqli_num_rows($result2) - 1;$i++)
-        {
-            $row = mysqli_fetch_array($result2); ?>
-                            <div class="col">
-                            <div class="card" style="width: 30rem;">
-                            <div class="brightenEffect">
-                            <?php
-            echo '<a href="ticket_booking.php?id=', $row["movie_id"], '">';
-            echo '<img class="card-img-top" src="', $row["movie_img"], '" alt="Card image cap">';
-            echo '</a>';
-?>
-                            </div>
-                            <div class="card-body">
-                            <?php
-            echo '<h5 class="card-title">', $row["movie_title"], "</h5>";
-            echo '<p class="card-text">', $row["movie_genre"], "</p>";
-            echo '<a href="ticket_booking.php?id=', $row["movie_id"], '" class="btn btn-primary"><i class="fa-solid fa-ticket"></i> Book Ahead</a>';
-?>
-                            </div>
-                            </div>
-                            </div>
-                            <?php
-        }
-        mysqli_free_result($result2);
-    }
-    else
-    {
-        echo '<h4 class="no-annot">No Booking to our movies right now</h4>';
-    }
-}
-else
-{
-    echo "ERROR: Could not able to execute $sql2. " . mysqli_error($conn);
-}
-
-// Close connection
-mysqli_close($conn);
-?>
+                    </div>
                 </div>
+                <br />
+                <hr>
+                <h1><b>Coming Soon</b></h1>
+                <div class="movies-container2">
+                    <div class="row g-4">
+                        <?php
+                        $sql2 = "SELECT * FROM movies_cs";
+                        if ($result2 = mysqli_query($conn, $sql2)) {
+                            if (mysqli_num_rows($result2) > 0) {
+                                for ($i = 0; $i <= mysqli_num_rows($result2) - 1; $i++) {
+                                    $row = mysqli_fetch_array($result2); ?>
+                                    <div class="col">
+                                        <div class="card" style="width: 30rem;">
+                                            <div class="brightenEffect">
+                                                <?php
+                                                echo '<a href="ticket_booking.php?id=', $row["movie_id"], '">';
+                                                echo '<img class="card-img-top" src="', $row["movie_img"], '" alt="Card image cap">';
+                                                echo '</a>';
+                                                ?>
+                                            </div>
+                                            <div class="card-body">
+                                                <?php
+                                                echo '<h5 class="card-title">', $row["movie_title"], "</h5>";
+                                                echo '<p class="card-text">', $row["movie_genre"], "</p>";
+                                                echo '<a href="ticket_booking.php?id=', $row["movie_id"], '" class="btn btn-primary"><i class="fa-solid fa-ticket"></i> Book Ahead</a>';
+                                                ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                        <?php
+                                }
+                                mysqli_free_result($result2);
+                            } else {
+                                echo '<h4 class="no-annot">No Booking to our movies right now</h4>';
+                            }
+                        } else {
+                            echo "ERROR: Could not able to execute $sql2. " . mysqli_error($conn);
+                        }
+
+                        // Close connection
+                        mysqli_close($conn);
+                        ?>
+                    </div>
+                </div>
+                <hr>
+                <br />
             </div>
-            <hr>
-            <br />
         </div>
     </div>
-</div>
 
     <footer>
-    <div class="footer-bottom">
-            <p>copyright &copy; <a href="dashboard.php">Ticket-Master</a>  </p>
-                    <div class="footer-menu">
-                      <ul class="f-menu">
-                        <li><a href="">About</a></li>
-                        <li><a href="contact_us.php">Contact</a></li>
-                      </ul>
-                    </div>
+        <div class="footer-bottom">
+            <p>copyright &copy; <a href="dashboard.php">Ticket-Master</a> </p>
+            <div class="footer-menu">
+                <ul class="f-menu">
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="contact_us.php">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
     <script>

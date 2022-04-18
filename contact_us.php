@@ -5,6 +5,7 @@ include "config.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@ include "config.php";
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
   <link rel="stylesheet" href="css/contact.css">
 </head>
+
 <body>
   <div class="container">
     <h1 class="brand"><span>Ticket</span> Master</h1>
@@ -21,7 +23,7 @@ include "config.php";
       <div class="company-info">
         <h3>Ticket-Master</h3>
         <ul>
-          <li><i class="fa fa-road"></i>  Boyd Graduate Studies Research Center, D. W. Brooks Drive, Athens, GA 30602</li>
+          <li><i class="fa fa-road"></i> Boyd Graduate Studies Research Center, D. W. Brooks Drive, Athens, GA 30602</li>
           <li><i class="fa fa-phone"></i> (706) 542-2911</li>
           <li><i class="fa fa-envelope"></i> test@ticketmaster.test</li>
         </ul>
@@ -53,19 +55,20 @@ include "config.php";
       </div>
     </div>
   </div>
- 
+
   <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
   <script src="main.js"></script>
 </body>
 <footer>
-    <div class="footer-bottom">
-            <p>copyright &copy; <a href="dashboard.php">Ticket-Master</a>  </p>
-                    <div class="footer-menu">
-                      <ul class="f-menu">
-                        <li><a href="">About</a></li>
-                        <li><a href="contact_us.php">Contact</a></li>
-                      </ul>
-                    </div>
-        </div>
-    </footer>
+  <div class="footer-bottom">
+    <p>copyright &copy; <a href="dashboard.php">Ticket-Master</a> </p>
+    <div class="footer-menu">
+      <ul class="f-menu">
+        <li><a href="about.php">About</a></li>
+        <li><a href="contact_us.php">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
 </html>
