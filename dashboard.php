@@ -121,10 +121,10 @@ include "config.php";
                                 }
                                 mysqli_free_result($result);
                             } else {
-                                echo '<h4 class="no-annot">No Booking to our movies right now</h4>';
+                                echo '<h4 class="no-annot">Our booking services are currently unavailable for this section.</h4>';
                             }
                         } else {
-                            echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
+                            echo "ERROR: Could not execute $sql. " . mysqli_error($conn);
                         } ?>
 
                     </div>
@@ -162,10 +162,10 @@ include "config.php";
                                 }
                                 mysqli_free_result($result2);
                             } else {
-                                echo '<h4 class="no-annot">No Booking to our movies right now</h4>';
+                                echo '<h4 class="no-annot">Our booking services are currently unavailable for this section.</h4>';
                             }
                         } else {
-                            echo "ERROR: Could not able to execute $sql2. " . mysqli_error($conn);
+                            echo "ERROR: Could not execute $sql2. " . mysqli_error($conn);
                         }
 
                         // Close connection
