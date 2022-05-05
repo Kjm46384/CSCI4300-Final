@@ -1,8 +1,3 @@
-<?php
-//include auth_session.php file on all user panel pages
-include "auth_session.php";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +21,6 @@ include "auth_session.php";
                 provide the widest choice of movies and maximum level of comfort for any enthusiastic visitor.
         </div>
     </div>
-</body>
 <footer>
     <div class="footer-bottom">
         <p>copyright &copy; <a href="dashboard.php">Ticket-Master</a> </p>
@@ -38,5 +32,5 @@ include "auth_session.php";
         </div>
     </div>
 </footer>
-
+</body>
 </html>

@@ -1,6 +1,4 @@
 <?php
-//include auth_session.php file on all user panel pages
-include "auth_session.php";
 include "config.php";
 ?>
 <!DOCTYPE html>
@@ -58,7 +56,6 @@ include "config.php";
 
   <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
   <script src="main.js"></script>
-</body>
 <footer>
   <div class="footer-bottom">
     <p>copyright &copy; <a href="dashboard.php">Ticket-Master</a> </p>
@@ -70,5 +67,5 @@ include "config.php";
     </div>
   </div>
 </footer>
-
+</body>
 </html>
