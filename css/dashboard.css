@@ -9,7 +9,7 @@
 }
 
 body {
-	background-color: #57595D;
+	background-image: linear-gradient(to bottom right, black , #57595D);
 }
 
 .primary-container {
@@ -106,14 +106,13 @@ body {
 
 .sidebar {
 	width: 50px;
-	height: 135%;
-	background-color: black;
+	background-image: linear-gradient(to bottom right, black , #030303);
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	/* padding-top: 60px; */
-	float: left
+	float: left;
 }
 
 .left-menu-icon {

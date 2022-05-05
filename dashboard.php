@@ -60,6 +60,52 @@ include "config.php";
                 <i class="left-menu-icon fas fa-shopping-cart"></i>
             </a>
         </div>
+        <div class="primary-container">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="ticket_booking.php?id=12">
+                        <img src="images/bad_guys_scroll.webp" class="d-block w-100" alt="Bad Guys Ad">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="ticket_booking.php?id=10">
+                        <img src="images/doctor_strange_scroll.webp" class="d-block w-100" alt="Doctor Strange Ad">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="ticket_booking.php?id=8">
+                        <img src="images/jurasic_world_scroll.webp" class="d-block w-100" alt="Jurasic World Dominion Ad">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="ticket_booking.php?id=10">
+                        <img src="images/popcorn_scroll.jpg" class="d-block w-100" alt="Popcorn Ad">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="ticket_booking.php?id=7">
+                        <img src="images/top_gun_scroll.webp" class="d-block w-100" alt="Top Gun Maverick Ad">
+                    </a>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+        </div>
         <?php $sql = "SELECT * FROM movies"; ?>
         <div class="primary-container">
             <div id="home-section-1" class="movie-show-container">
