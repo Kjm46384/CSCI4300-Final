@@ -53,11 +53,11 @@ include "config.php";
             <a href="#">
                 <i class="left-menu-icon fas fa-search"></i>
             </a>
-            <a href="#">
-                <i class="left-menu-icon fas fa-home"></i>
+            <a href="account_settings.php">
+                <i title='Settings'class="left-menu-icon fas fa-cog"></i>
             </a>
-            <a href="#">
-                <i class="left-menu-icon fas fa-shopping-cart"></i>
+            <a href="logout.php">
+                <i title='Sign Out'class="left-menu-icon fas fa-sign-out-alt"></i>
             </a>
         </div>
         <div class="primary-container">
