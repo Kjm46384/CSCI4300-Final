@@ -9,9 +9,6 @@ $link = mysqli_connect("localhost", "root", "", "movie_database");
 $movieQuery = "SELECT * FROM movies WHERE movie_id = $id";
 $movieImageById = mysqli_query($link, $movieQuery);
 $row = mysqli_fetch_array($movieImageById);
-
-$theatreQuery = "SELECT  `theatre_name` FROM `theatre` WHERE 1;";
-$theatreName = mysqli_query($link, $theatreQuery);
 ?>
 
 <head>
@@ -113,17 +110,17 @@ $theatreName = mysqli_query($link, $theatreQuery);
 
     <script src="scripts/jquery-3.3.1.min.js "></script>
     <script src="scripts/script.js "></script>
-</body>
 
+    <footer>
+    	<div class="footer-bottom">
+    	    <p>copyright &copy; <a href="dashboard.php">Ticket-Master</a> </p>
+    	    <div class="footer-menu">
+    	        <ul class="f-menu">
+    	            <li><a href="about.php">About</a></li>
+    	            <li><a href="contact_us.php">Contact</a></li>
+        	    </ul>
+    	    </div>
+    	</div>
+	</footer>
+</body>
 </html>
-<footer>
-    <div class="footer-bottom">
-        <p>copyright &copy; <a href="dashboard.php">Ticket-Master</a> </p>
-        <div class="footer-menu">
-            <ul class="f-menu">
-                <li><a href="about.php">About</a></li>
-                <li><a href="contact_us.php">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
