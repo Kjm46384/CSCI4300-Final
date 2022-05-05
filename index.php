@@ -17,6 +17,9 @@
             <a href="login.php">
                 <button type="button" class="btn btn-outline-primary btn-lg center-top-dipped">Click Here to Login</button>
             </a>
+            <a href="register.php">
+                <button type="button" class="btn btn-outline-danger center-top-double-dipped">Click Here to Register</button>
+            </a>
         </section>
     </div>
     <footer>

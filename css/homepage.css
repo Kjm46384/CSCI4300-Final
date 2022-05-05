@@ -65,6 +65,14 @@ h1{
   transform: translate(-50%, -50%);
 }
 
+.center-top-double-dipped {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  margin-top: 230px;
+  transform: translate(-50%, -50%);
+}
+
 .center-middle {
   position: absolute;
   top: 30%;
