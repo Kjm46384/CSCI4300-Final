@@ -4,6 +4,8 @@
 include "auth_session.php";
 
 $id = $_GET['id'];
+$time = $_GET['time'];
+$theatre = $_GET['theatre'];
 $link = mysqli_connect("localhost", "root", "", "movie_database");
 if($id <= 6)
 {
@@ -25,6 +27,7 @@ else if ($id > 6)
     <meta http-equiv="X-UA-Compatible">
     <link rel="stylesheet" href="css/booking.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ad45f9ba34.js" crossorigin="anonymous"></script>
     <title>Book <?php echo $row['movie_title']; ?> Now</title>
     <link rel="icon" type="image/png" href="img/logo.png">
 </head>
@@ -66,11 +69,20 @@ else if ($id > 6)
                 <form action="payment.php" method="POST">
 
                     <select name="theatre" required>
-                        <option value="" disabled selected>THEATRE</option>
-                        <option value="main-hall">Main Hall</option>
-                        <option value="vip-hall">VIP Hall</option>
-                        <option value="private-hall">Private Hall</option>
+                        <option value="" disabled <?php if($theatre=="") {echo 'selected';} ?>>THEATRE</option>
+                        <option value="main-hall" <?php if($theatre=="1") {echo 'selected';} ?>>Main Hall</option>
+                        <option value="vip-hall" <?php if($theatre=="2") {echo 'selected';} ?>>VIP Hall</option>
+                        <option value="private-hall" <?php if($theatre=="3") {echo 'selected';} ?>>Private Hall</option>
                     </select>
+
+                    <select name="showtime" required>
+                        <option value="" disabled <?php if($time=="") {echo 'selected';} ?>>TIME</option>
+                        <option value="1930" <?php if($time=="1900") {echo 'selected';} ?>>7:00 PM</option>
+                        <option value="2030" <?php if($time=="2030") {echo 'selected';} ?>>8:30 PM</option>
+                        <option value="2100" <?php if($time=="2100") {echo 'selected';} ?>>9:00 PM</option>
+                    </select>
+
+                    <input type="date" id="start" name="beginning_date" min="2022-01-01" max="9999-12-31" <?php if($time!="") {echo 'value="'; $currentDate = new DateTime(); echo $currentDate->format('Y-m-d'); echo '"';} ?>>
 
                     <select name="type" required>
                         <option value="" disabled selected>TYPE</option>
@@ -78,19 +90,11 @@ else if ($id > 6)
                         <option value="imax">IMAX</option>
                     </select>
 
-                    <input type="date" id="start" name="beginning_date" min="2022-01-01" max="9999-12-31">
-
-                    <select name="showtime" required>
-                        <option value="" disabled selected>TIME </option>
-                        <option value="09-00">7:30 PM</option>
-                        <option value="12-00">8:30 PM</option>
-                        <option value="15-00">9:00 PM</option>
-                    </select>
-                    <input  placeholder="Number of Tickets" id="12.50"  type="number">
+                    <input placeholder="Number of Tickets" id="12.50"  type="number">
                 
                     <br>
 
-                    <button type="submit" value="submit" name="submit" class="form-btn">Book Now</button>
+                    <button type="submit" value="submit" name="submit" class="form-btn"><i class="fa-solid fa-book-open"></i><b> Book Now</b></button>
                      <?php
 
                     
@@ -116,8 +120,6 @@ else if ($id > 6)
         </div>
     </div>
 
-    <script src="scripts/jquery-3.3.1.min.js "></script>
-    <script src="scripts/script.js "></script>
     <footer>
     	<div class="footer-bottom">
     	    <p>copyright &copy; <a href="dashboard.php">Ticket-Master</a> </p>
