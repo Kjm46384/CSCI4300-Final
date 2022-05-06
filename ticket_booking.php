@@ -69,14 +69,14 @@ else if ($id > 6)
                 <form action="payment.php" method="POST">
 
                     <select name="theatre" required>
-                        <option value="" disabled hidden <?php if($theatre=="") {echo 'selected';} ?>>THEATRE</option>
+                        <option value="" disabled <?php if($theatre=="") {echo 'selected';} ?>>THEATRE</option>
                         <option value="main-hall" <?php if($theatre=="1") {echo 'selected';} ?>>Main Hall</option>
                         <option value="vip-hall" <?php if($theatre=="2") {echo 'selected';} ?>>VIP Hall</option>
                         <option value="private-hall" <?php if($theatre=="3") {echo 'selected';} ?>>Private Hall</option>
                     </select>
 
                     <select name="showtime" required>
-                        <option value="" disabled hidden <?php if($time=="") {echo 'selected';} ?>>TIME</option>
+                        <option value="" disabled <?php if($time=="") {echo 'selected';} ?>>TIME</option>
                         <option value="1930" <?php if($time=="1900") {echo 'selected';} ?>>7:00 PM</option>
                         <option value="2030" <?php if($time=="2030") {echo 'selected';} ?>>8:30 PM</option>
                         <option value="2100" <?php if($time=="2100") {echo 'selected';} ?>>9:00 PM</option>
@@ -85,7 +85,7 @@ else if ($id > 6)
                     <input type="date" id="start" name="beginning_date" min="2022-01-01" max="9999-12-31" <?php if($time!="") {echo 'value="'; $currentDate = new DateTime(); echo $currentDate->format('Y-m-d'); echo '"';} ?>>
 
                     <select name="type" required>
-                        <option value="" disabled hidden selected>TYPE</option>
+                        <option value="" disabled selected>TYPE</option>
                         <option value="2d">2D</option>
                         <option value="imax">IMAX</option>
                     </select>
