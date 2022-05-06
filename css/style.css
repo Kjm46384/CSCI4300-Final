@@ -66,4 +66,9 @@ h3 {
     color: white;
 }
 
+.white-text-large {
+    color: white;
+    text-align: center;
+    font-size: 35px;
+}
 

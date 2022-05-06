@@ -27,11 +27,11 @@ include "config.php";
                     <li class="nr_li dd_main">
                         <img src="./images/profile-pic.png">
 
-                        <div class="dd_menu" style="z-index: 1; position: absolute;">
+                        <div class="dd_menu" style="z-index: 9; position: absolute;">
                             <div class="dd_left">
                                 <ul>
-                                    <li><i class="fas fa-cog"></i></li>
-                                    <li><i class="fas fa-sign-out-alt"></i></li>
+                                    <a href="account_settings.php"><li><i class="fas fa-cog"></i></li></a>
+                                    <a href="logout.php"><li><i class="fas fa-sign-out-alt"></i></li></a>
                                 </ul>
                             </div>
                             <div class="dd_right">

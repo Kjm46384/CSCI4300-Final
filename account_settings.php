@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-<p class='white-text'>
+<p class='white-text-large'>
     <?php
     // echo $_SESSION['username'];
     // example using cookie
@@ -17,7 +17,6 @@
 <?php
 require('config.php');
 include("auth_session.php");
-session_start();
 
 $username = $_COOKIE['user'];
 
