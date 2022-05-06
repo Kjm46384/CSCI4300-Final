@@ -63,11 +63,11 @@ include "config.php";
         <a href="search.php">
             <i class="left-menu-icon fas fa-search"></i>
         </a>
-        <a href="#">
-            <i class="left-menu-icon fas fa-home"></i>
+        <a href="account_settings.php">
+            <i class="left-menu-icon fas fa-cog"></i>
         </a>
-        <a href="#">
-            <i class="left-menu-icon fas fa-shopping-cart"></i>
+        <a href="logout.php">
+            <i class="left-menu-icon fas fa-sign-out-alt"></i>
         </a>
     </div>
     <div class="primary-container">
@@ -92,7 +92,7 @@ include "config.php";
                 </div>
                 <div class="carousel-item">
                     <a href="ticket_booking.php?id=8">
-                        <img src="images/jurasic_world_scroll.webp" class="d-block w-100" alt="Jurasic World Dominion Ad">
+                        <img src="images/jurasic_world_scroll.png" class="d-block w-100" alt="Jurasic World Dominion Ad">
                     </a>
                 </div>
                 <div class="carousel-item">
@@ -124,7 +124,7 @@ include "config.php";
 
             <form action="search.php" method="POST">
                 <input type="text" name="search" placeholder="search">
-                <button type="submit" name="submit-search"></button>
+                <button type="submit" name="submit-search">Search</button>
             </form>
 
             <br>
