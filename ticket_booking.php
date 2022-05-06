@@ -5,10 +5,18 @@ include "auth_session.php";
 
 $id = $_GET['id'];
 $link = mysqli_connect("localhost", "root", "", "movie_database");
-
-$movieQuery = "SELECT * FROM movies WHERE movie_id = $id";
-$movieImageById = mysqli_query($link, $movieQuery);
-$row = mysqli_fetch_array($movieImageById);
+if($id <= 6)
+{
+	$movieQuery = "SELECT * FROM movies WHERE movie_id = $id";
+	$movieImageById = mysqli_query($link, $movieQuery);
+	$row = mysqli_fetch_array($movieImageById);
+}
+else if ($id > 6)
+{
+	$movieQuery = "SELECT * FROM movies_cs WHERE movie_id = $id";
+	$movieImageById = mysqli_query($link, $movieQuery);
+	$row = mysqli_fetch_array($movieImageById);
+}
 ?>
 
 <head>
@@ -41,12 +49,12 @@ $row = mysqli_fetch_array($movieImageById);
             <div class="movie-information">
                 <table>
                     <tr>
-                        <td>GENGRE</td>
+                        <td>GENRE</td>
                         <td><?php echo $row['movie_genre']; ?></td>
                     </tr>
                     <tr>
                         <td>DURATION</td>
-                        <td><?php echo $row['movie_duration']; ?> minutes</td>
+                        <td><?php if($row['movie_duration']=="TBA") {echo $row['movie_duration'];} else {echo $row['movie_duration']; echo ' minutes';} ?></td>
                     </tr>
                     <tr>
                         <td>RELEASE DATE</td>

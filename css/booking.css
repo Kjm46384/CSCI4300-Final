@@ -1,3 +1,10 @@
+body {
+    display: flex;
+    min-height: 98vh;
+    flex-direction: column;
+    background-color: black;
+}
+
 .booking-panel {
     display: grid;
     grid-gap: 25px;
@@ -9,7 +16,7 @@
     -moz-box-shadow: 1px 0px 23px 3px rgba(0, 0, 0, 0.45);
     transition: all 0.7s ease;
     width: 90%;
-    height: 100vh;
+    height: 10vh;
     margin: 0 auto;
 }
 h1{
@@ -140,10 +147,9 @@ h1{
 
 footer{
     position: relative;
+    margin-top: auto;
     bottom: 0;
-    left: 0;
-    right: 0;
-    background: #111;
+    background-color: black;
     height: auto;
     color: #fff;
 }
