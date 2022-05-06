@@ -29,7 +29,7 @@ else if ($id > 6)
     <link rel="icon" type="image/png" href="img/logo.png">
 </head>
 
-<body style="background-color:black;">
+<body style="background-image: linear-gradient(to bottom right, black , #57595D);">
     <div class="booking-panel">
         <div class="booking-panel-section booking-panel-section1">
             <h1>RESERVE YOUR SEAT</h1>
@@ -118,7 +118,6 @@ else if ($id > 6)
 
     <script src="scripts/jquery-3.3.1.min.js "></script>
     <script src="scripts/script.js "></script>
-
     <footer>
     	<div class="footer-bottom">
     	    <p>copyright &copy; <a href="dashboard.php">Ticket-Master</a> </p>

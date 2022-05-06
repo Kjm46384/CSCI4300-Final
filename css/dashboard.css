@@ -38,6 +38,10 @@ body {
 	text-transform: uppercase;
 }
 
+.navbar .nav_right {
+	padding-top: 9px;
+}
+
 .navbar .nav_right>ul {
 	display: flex;
 	align-items: center;
