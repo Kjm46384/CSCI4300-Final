@@ -91,8 +91,6 @@ else if ($id > 6)
                     </select>
 
                     <input placeholder="Number of Tickets" id="12.50"  type="number">
-                
-                    <br>
 
                     <button type="submit" value="submit" name="submit" class="form-btn"><i class="fa-solid fa-book-open"></i><b> Book Now</b></button>
                      <?php
@@ -114,7 +112,7 @@ else if ($id > 6)
                     //                     '" . $_POST["showtime"] . "',)";
                     //     mysqli_query($link, $insert_query);
                     // }
-                    ?> -->
+                    ?>
                 </form>
             </div>
         </div>
