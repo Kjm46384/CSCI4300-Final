@@ -81,27 +81,27 @@ include "config.php";
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <a href="ticket_booking.php?id=12">
+                    <a href="ticket_booking.php?id=12&time=&theatre=">
                         <img src="images/bad_guys_scroll.webp" class="d-block w-100" alt="Bad Guys Ad">
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="ticket_booking.php?id=10">
+                    <a href="ticket_booking.php?id=10&time=&theatre=">
                         <img src="images/doctor_strange_scroll.webp" class="d-block w-100" alt="Doctor Strange Ad">
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="ticket_booking.php?id=8">
+                    <a href="ticket_booking.php?id=8&time=&theatre=">
                         <img src="images/jurasic_world_scroll.png" class="d-block w-100" alt="Jurasic World Dominion Ad">
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="ticket_booking.php?id=10">
+                    <a href="ticket_booking.php?id=10&time=&theatre=">
                         <img src="images/popcorn_scroll.jpg" class="d-block w-100" alt="Popcorn Ad">
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="ticket_booking.php?id=7">
+                    <a href="ticket_booking.php?id=7&time=&theatre=">
                         <img src="images/top_gun_scroll.webp" class="d-block w-100" alt="Top Gun Maverick Ad">
                     </a>
                 </div>
