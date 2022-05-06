@@ -78,7 +78,7 @@ include "config.php";
                                     <label class='control-label'></label>
 
                                     <button style="margin:5px;" class='form-control btn btn-primary' type='submit'> Continue →</button>
-                                    <button  onclick="window.history.back('-100')" style="margin:5px;" class='form-control btn btn-secondary'> ← Cancel </button>
+                                    <button type='button' onclick="window.history.back('-100')" style="margin:5px;" class='form-control btn btn-secondary'> ← Cancel </button>
                         </form>
                     </div>
                 </div>
