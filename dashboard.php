@@ -50,7 +50,7 @@ include "config.php";
             </div>
         </div>
         <div class="sidebar">
-            <a href="#">
+            <a href="search.php">
                 <i class="left-menu-icon fas fa-search"></i>
             </a>
             <a href="account_settings.php">
