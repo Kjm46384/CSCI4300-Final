@@ -14,7 +14,7 @@
             <div class="imageContainer">
                 <img src="images/homepage_back.png">
             </div>
-            <div class="caption center-top"><p class="animate__animated animate__fadeInLeft add-margin">Skip the line.</p><p class="animate__animated animate__fadeInLeft animate__delay-1s add-margin">Book Ahead.</p></div>
+            <div class="caption center-top"><p class="animate__animated animate__fadeInUp add-margin">Skip the line.</p><p class="animate__animated animate__fadeInUp animate__delay-1s add-margin">Book Ahead.</p></div>
             <a href="login.php">
                 <button type="button" class="btn btn-outline-primary btn-lg center-top-dipped animate__animated animate__fadeIn animate__delay-2s">Click Here to Login</button>
             </a>

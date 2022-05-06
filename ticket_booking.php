@@ -35,7 +35,7 @@ else if ($id > 6)
             <h1>RESERVE YOUR SEAT</h1>
         </div>
         <div class="booking-panel-section booking-panel-section2" onClick="location.href='dashboard.php'">
-            <i class="fas fa-2x fa-times"></i>
+            <i class="fas fa-2x fa-times rounded"></i>
         </div>
         <div class="booking-panel-section booking-panel-section3">
             <div class="movie-box">
