@@ -82,7 +82,7 @@ else if ($id > 6)
                         <option value="2100" <?php if($time=="2100") {echo 'selected';} ?>>9:00 PM</option>
                     </select>
 
-                    <input type="date" id="start" name="beginning_date" min="2022-01-01" max="9999-12-31" <?php if($time!="") {echo 'value="'; $currentDate = new DateTime(); echo $currentDate->format('Y-m-d'); echo '"';} ?>>
+                    <input type="date" id="start" name="beginning_date" <?php if($id<=6) {echo 'min="2022-01-01"';} else if ($id>6) {echo 'min="'; echo $row['movie_release_date']; echo '"';} ?> max="9999-12-31" <?php if($time!="") {echo 'value="'; $currentDate = new DateTime(); echo $currentDate->format('Y-m-d'); echo '"';} ?>>
 
                     <select name="type" required>
                         <option value="" disabled selected>TYPE</option>
