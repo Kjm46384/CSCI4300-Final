@@ -149,7 +149,7 @@ include "config.php";
                                     <div class="card" style="width: 30rem;">
                                         <div class="brightenEffect">
                                             <?php
-                                            echo '<a href="ticket_booking.php?id=', $row["movie_id"], '">';
+                                            echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=&theatre=">';
                                             echo '<img class="card-img-top" src="', $row["movie_img"], '" alt="Card image cap">';
                                             echo '</a>';
                                             ?>
@@ -160,34 +160,35 @@ include "config.php";
                                             echo '<p class="card-text">', $row["movie_genre"], "</p>";
                                             ?>
                                         </div>
+                                        <p style="padding-left: 15px; margin-bottom: 0px; padding-bottom: 0px;"><b>Today's Showtimes</b></p>
                                         <ul class="list-group list-group-flush">
                                             <li class="list-group-item">
-                                                Theater 1<br />
+                                                Theatre 1: Main Hall<br />
                                                 <?php
-                                                echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=700pm&theater=1" class="btn btn-primary">7:00pm</a> ';
-                                                echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=830pm&theater=1" class="btn btn-primary">8:30pm</a> ';
-                                                echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=900pm&theater=1" class="btn btn-primary">9:00pm</a> ';
+                                                echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=1900&theatre=1" class="btn btn-primary">7:00pm</a> ';
+                                                echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=2030&theatre=1" class="btn btn-primary">8:30pm</a> ';
+                                                echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=2100&theatre=1" class="btn btn-primary">9:00pm</a> ';
                                                 ?>
                                             </li>
                                             <li class="list-group-item">
-                                                Theater 2<br />
+                                                Theatre 2: VIP Hall<br />
                                                 <?php
-                                                echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=700pm&theater=2" class="btn btn-primary">7:00pm</a> ';
-                                                echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=830pm&theater=2" class="btn btn-primary">8:30pm</a> ';
-                                                echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=900pm&theater=2" class="btn btn-primary">9:00pm</a> ';
+                                                echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=1900&theatre=2" class="btn btn-primary">7:00pm</a> ';
+                                                echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=2030&theatre=2" class="btn btn-primary">8:30pm</a> ';
+                                                echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=2100&theatre=2" class="btn btn-primary">9:00pm</a> ';
                                                 ?>
                                             </li>
                                             <li class="list-group-item">
-                                                Theater 3<br />
+                                                Theatre 3: Private Hall<br />
                                                 <?php
-                                                echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=700pm&theater=3" class="btn btn-primary">7:00pm</a> ';
-                                                echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=830pm&theater=3" class="btn btn-primary">8:30pm</a> ';
-                                                echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=900pm&theater=3" class="btn btn-primary">9:00pm</a> ';
+                                                echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=1900&theatre=3" class="btn btn-primary">7:00pm</a> ';
+                                                echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=2030&theatre=3" class="btn btn-primary">8:30pm</a> ';
+                                                echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=2100&theatre=3" class="btn btn-primary">9:00pm</a> ';
                                                 ?>
                                             </li>
                                         </ul>
                                         <div class="card-body">
-                                            <?php echo '<a href="ticket_booking.php?id=', $row["movie_id"], '" class="card-link">See all theaters and showtimes...</a>'; ?>
+                                            <?php echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=&theatre=" class="card-link">See all theaters and showtimes...</a>'; ?>
                                         </div>
                                     </div>
                                 </div>
@@ -222,7 +223,7 @@ include "config.php";
                                     <div class="card" style="width: 30rem;">
                                         <div class="brightenEffect">
                                             <?php
-                                            echo '<a href="ticket_booking.php?id=', $row["movie_id"], '">';
+                                            echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=&theatre=">';
                                             echo '<img class="card-img-top" src="', $row["movie_img"], '" alt="Card image cap">';
                                             echo '</a>';
                                             ?>
@@ -231,7 +232,7 @@ include "config.php";
                                             <?php
                                             echo '<h5 class="card-title">', $row["movie_title"], "</h5>";
                                             echo '<p class="card-text">', $row["movie_genre"], "</p>";
-                                            echo '<a href="ticket_booking.php?id=', $row["movie_id"], '" class="btn btn-primary"><i class="fa-solid fa-ticket"></i> Book Ahead</a>';
+                                            echo '<a href="ticket_booking.php?id=', $row["movie_id"], '&time=&theatre=" class="btn btn-primary"><i class="fa-solid fa-ticket"></i> Book Ahead</a>';
                                             ?>
                                         </div>
                                     </div>
