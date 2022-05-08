@@ -110,7 +110,7 @@ body {
 
 .sidebar {
 	width: 50px;
-	background-image: linear-gradient(to bottom right, black , #030303);
+	/* background-image: linear-gradient(to bottom right, black , #030303); */
 	position: relative;
 	display: flex;
 	flex-direction: column;
