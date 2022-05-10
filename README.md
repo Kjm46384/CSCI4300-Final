@@ -10,7 +10,8 @@ How to run the project:
 - Put parent folder (CSCI4300-Final) in the htdocs folder of XAMPP
 - Run XAMPP, go to localhost (using Apache)
 - open PhpMyAdmin
-- import movie_database.sql into the PhpMyAdmin
+- create 'movie_database' Database
+- import movie_database.sql into 'movie_database'
 
 Entry point of project:
 - The entry point of the website is index.php
