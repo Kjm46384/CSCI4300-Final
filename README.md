@@ -19,6 +19,8 @@ Functionality of the project:
 - Our project is movie ticket booking website. Registered users can book movies and see their booking history
 
 Website has been tested on:
+- Chrome for Windows 10
+- Opera for Windows 10
 - Chrome for MacOS 12.3.1
 - Safari for MacOS 12.3.1
 
