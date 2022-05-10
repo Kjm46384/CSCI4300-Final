@@ -51,6 +51,7 @@ include "config.php";
             </div>
         </div>
         <div class="sidebar">
+            <br />
             <a href="search.php">
                 <i title='Search' class="left-menu-icon fas fa-search"></i>
             </a>
