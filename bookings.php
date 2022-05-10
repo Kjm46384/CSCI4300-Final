@@ -148,7 +148,7 @@ include "config.php";
                                     <td><?php $showtime = $row["showtime"]; if ($showtime == '1900') { echo "7:00pm"; } else if ($showtime == '2030') { echo "8:30pm"; } else if ($showtime == '2100') { echo "9:00pm"; } ?></td>
                                     <td><?php echo $row["quantity"]; ?></td>
                                     <td>#<?php echo $row["id"]; ?></td>
-                                   <td><?php $hasPayed = $row["hasPayed"]; if ($hasPayed == 1) { echo '<i style="color: green;" class="fa-regular fa-circle-check"> <div style="font-family: \'Jost\', sans-serif; display: inline;">Payment Confirmed</div></i>'; } else { echo '<i style="color: red;" class="fa-solid fa-circle-xmark"></i> <a href="payment.php?order='; echo $row["id"]; echo '"><button type="button" class="btn btn-outline-primary btn-sm">Click to Pay Now</button></a>';} ?></td>
+                                   <td><?php $hasPayed = $row["hasPayed"]; if ($hasPayed == 1) { echo '<i style="color: green;" class="fa-regular fa-circle-check"> <div style="font-family: \'Jost\', sans-serif; display: inline;">Payment Confirmed</div></i>'; } else { echo '<i style="color: red;" class="fa-regular fa-circle-xmark"></i> <a href="payment.php?order='; echo $row["id"]; echo '"><button type="button" class="btn btn-outline-primary btn-sm">Click to Pay Now</button></a>';} ?></td>
                                    <td><a href="deletebooking.php?id=<?php echo $row['id']; ?>"><button type="button" class="btn btn-outline-danger btn-sm">Cancel Booking</button></a></td>
                                 </tr>
                             <?php
