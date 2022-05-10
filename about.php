@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>About Us - Ticket-Master</title>
     <link rel="stylesheet" href="css/about.css">
 </head>
 
 <body>
     <div class="about-section">
         <div class="inner-container">
-            <h1>About Us - Ticket-Master</h1>
+            <h1>About Us</h1>
             <p class="text">
                 Ticket-Master is an emerging cinema franchise.The newest, hottest
                 movies are screened here and we ensure that any esteemed customers will find an
