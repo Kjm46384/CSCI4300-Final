@@ -66,7 +66,7 @@ else if ($id > 6)
                 </table>
             </div>
             <div class="booking-form-container">
-                <form action="payment.php" method="POST">
+                <form action="" method="POST">
 
                     <select name="theatre" required>
                         <option value="" disabled <?php if($theatre=="") {echo 'selected';} ?>>THEATRE</option>
@@ -82,7 +82,7 @@ else if ($id > 6)
                         <option value="2100" <?php if($time=="2100") {echo 'selected';} ?>>9:00 PM</option>
                     </select>
 
-                    <input type="date" id="start" name="beginning_date" <?php if($id<=6) {echo 'min="'; $currentDate = new DateTime(); echo $currentDate->format('Y-m-d'); echo '"';} else if ($id>6) {echo 'min="'; echo $row['movie_release_date']; echo '"';} ?> max="9999-12-31" <?php if($time!="") {echo 'value="'; echo $currentDate->format('Y-m-d'); echo '"';} ?>>
+                    <input type="date" id="start" name="bookingDate" <?php if($id<=6) {echo 'min="'; $currentDate = new DateTime(); echo $currentDate->format('Y-m-d'); echo '"';} else if ($id>6) {echo 'min="'; echo $row['movie_release_date']; echo '"';} ?> max="9999-12-31" <?php if($time!="") {echo 'value="'; echo $currentDate->format('Y-m-d'); echo '"';} ?>>
 
                     <select name="type" required>
                         <option value="" disabled selected>TYPE</option>
@@ -90,28 +90,36 @@ else if ($id > 6)
                         <option value="imax">IMAX</option>
                     </select>
 
-                    <input placeholder="Number of Tickets" id="12.50"  type="number">
+                    <input placeholder="Number of Tickets" id="12.50" name="quantity" type="number">
 
                     <button type="submit" value="submit" name="submit" class="form-btn"><i class="fa-solid fa-book-open"></i><b> Book Now</b></button>
-                     <?php
-
+                    <?php
                     
+                    if (isset($_POST['submit'])) { 
 
-                    // if (isset($_POST['submit'])) {
+                    	$username = $_COOKIE['user'];
+                    	$bTitle = $row["movie_title"];
+                    	$bTheatre = $_POST["theatre"];
+                    	$bType = $_POST["type"];
+                    	$bDate = $_POST["bookingDate"];
+                    	$bShowtime = $_POST["showtime"];
+                    	$bQuantity = $_POST["quantity"];
+                    	$bPayed = False;
 
-                    //     $insert_query = "INSERT INTO 
-                    //     bookingTable (  movieName,
-                    //                     bookingTheatre,
-                    //                     bookingType,
-                    //                     bookingDate,
-                    //                     bookingTime)
-                    //     VALUES (        '" . $row['movieTitle'] . "',
-                    //                     '" . $_POST["theatre"] . "',
-                    //                     '" . $_POST["type"] . "',
-                    //                     '" . $_POST["date"] . "',
-                    //                     '" . $_POST["showtime"] . "',)";
-                    //     mysqli_query($link, $insert_query);
-                    // }
+                    	$insert_query = "INSERT INTO bookingtable (username, movieTitle, theatre, type, bookingDate, showtime, quantity, hasPayed) VALUES ('$username', '$bTitle', '$bTheatre', '$bType', '$bDate', '$bShowtime', '$bQuantity', '$bPayed');"; 
+                    	$result = mysqli_query($link, $insert_query);
+
+                    	if ($result) {
+                    		$orderQuery = "SELECT id FROM bookingtable WHERE username = '$username' ORDER BY id DESC LIMIT 1;";
+                    		$orderData = mysqli_query($link, $orderQuery);
+                    		$orderNumber = mysqli_fetch_array($orderData);
+                    		header("Location: payment.php?order=".$orderNumber['id']);
+                    		exit();
+                    	}
+                    	else {
+                    		echo "Error: Reservation could not be saved. Please try again.";
+                    	}
+					}
                     ?>
                 </form>
             </div>

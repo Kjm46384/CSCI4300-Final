@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 06, 2022 at 03:04 AM
+-- Generation Time: May 10, 2022 at 04:21 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -20,6 +20,31 @@ SET time_zone = "+00:00";
 --
 -- Database: `movie_database`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bookingtable`
+--
+
+CREATE TABLE `bookingtable` (
+  `id` int(11) NOT NULL,
+  `username` varchar(233) NOT NULL,
+  `movieTitle` varchar(233) NOT NULL,
+  `theatre` varchar(233) NOT NULL,
+  `type` varchar(233) NOT NULL,
+  `bookingDate` date NOT NULL,
+  `showtime` int(4) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `hasPayed` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `bookingtable`
+--
+
+INSERT INTO `bookingtable` (`id`, `username`, `movieTitle`, `theatre`, `type`, `bookingDate`, `showtime`, `quantity`, `hasPayed`) VALUES
+(1, 'testuser', 'Sonic the Hedgehog 2', 'main-hall', '2d', '2022-05-10', 2100, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -78,6 +103,30 @@ INSERT INTO `movies_cs` (`movie_id`, `movie_img`, `movie_title`, `movie_genre`, 
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `paymentinfo`
+--
+
+CREATE TABLE `paymentinfo` (
+  `id` int(11) NOT NULL,
+  `username` varchar(233) NOT NULL,
+  `orderNumber` int(11) NOT NULL,
+  `ccName` varchar(233) NOT NULL,
+  `ccNumber` varchar(233) NOT NULL,
+  `ccCVC` int(11) NOT NULL,
+  `ccMonth` int(2) NOT NULL,
+  `ccYear` int(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `paymentinfo`
+--
+
+INSERT INTO `paymentinfo` (`id`, `username`, `orderNumber`, `ccName`, `ccNumber`, `ccCVC`, `ccMonth`, `ccYear`) VALUES
+(1, 'testuser', 1, 'Test User', '1234 5678 9999', 123, 4, 2025);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -102,6 +151,12 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`, `create_datetime`) V
 --
 
 --
+-- Indexes for table `bookingtable`
+--
+ALTER TABLE `bookingtable`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `movies`
 --
 ALTER TABLE `movies`
@@ -114,6 +169,12 @@ ALTER TABLE `movies_cs`
   ADD PRIMARY KEY (`movie_id`);
 
 --
+-- Indexes for table `paymentinfo`
+--
+ALTER TABLE `paymentinfo`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -124,10 +185,22 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `bookingtable`
+--
+ALTER TABLE `bookingtable`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `movies_cs`
 --
 ALTER TABLE `movies_cs`
   MODIFY `movie_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `paymentinfo`
+--
+ALTER TABLE `paymentinfo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
