@@ -11,7 +11,7 @@
 <body>
     <div class="about-section">
         <div class="inner-container">
-            <h1>About Us</h1>
+            <h1>About Us - Ticket-Master</h1>
             <p class="text">
                 Ticket-Master is an emerging cinema franchise.The newest, hottest
                 movies are screened here and we ensure that any esteemed customers will find an

@@ -28,7 +28,7 @@ else if ($id > 6)
     <link rel="stylesheet" href="css/booking.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/ad45f9ba34.js" crossorigin="anonymous"></script>
-    <title>Book <?php echo $row['movie_title']; ?> Now</title>
+    <title>Book <?php echo $row['movie_title']; ?> Now - Ticket-Master</title>
     <link rel="icon" type="image/png" href="img/logo.png">
 </head>
 
@@ -77,7 +77,7 @@ else if ($id > 6)
 
                     <select name="showtime" required>
                         <option value="" disabled <?php if($time=="") {echo 'selected';} ?>>TIME</option>
-                        <option value="1930" <?php if($time=="1900") {echo 'selected';} ?>>7:00 PM</option>
+                        <option value="1900" <?php if($time=="1900") {echo 'selected';} ?>>7:00 PM</option>
                         <option value="2030" <?php if($time=="2030") {echo 'selected';} ?>>8:30 PM</option>
                         <option value="2100" <?php if($time=="2100") {echo 'selected';} ?>>9:00 PM</option>
                     </select>
@@ -86,8 +86,8 @@ else if ($id > 6)
 
                     <select name="type" required>
                         <option value="" disabled selected>TYPE</option>
-                        <option value="2d">2D</option>
-                        <option value="imax">IMAX</option>
+                        <option value="2D">2D</option>
+                        <option value="IMAX">IMAX</option>
                     </select>
 
                     <input placeholder="Number of Tickets" id="12.50" name="quantity" type="number">
@@ -104,7 +104,7 @@ else if ($id > 6)
                     	$bDate = $_POST["bookingDate"];
                     	$bShowtime = $_POST["showtime"];
                     	$bQuantity = $_POST["quantity"];
-                    	$bPayed = False;
+                    	$bPayed = 0;
 
                     	$insert_query = "INSERT INTO bookingtable (username, movieTitle, theatre, type, bookingDate, showtime, quantity, hasPayed) VALUES ('$username', '$bTitle', '$bTheatre', '$bType', '$bDate', '$bShowtime', '$bQuantity', '$bPayed');"; 
                     	$result = mysqli_query($link, $insert_query);

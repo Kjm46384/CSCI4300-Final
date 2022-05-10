@@ -9,7 +9,7 @@ include 'auth_session.php';
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title> Thank You!</title>
+	<title>Thank You! - Ticket-Master</title>
 	<link href='https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat:700' rel='stylesheet' type='text/css'>
 	<style>
 		@import url(//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css);
@@ -27,7 +27,7 @@ include 'auth_session.php';
 	<div class="main-content">
 		<i class="fa fa-check main-content__checkmark" id="checkmark"></i>
 		<p class="main-content__body" data-lead-id="main-content-body">You are now booked!</p>
-		<a class="btn btn-secondary btn-sm" href="dashboard.php" role="button">Go to homepage</a>
+		<a class="btn btn-secondary btn-sm" href="bookings.php" role="button">Go to Bookings</a>
 	</div>
 
     <footer>

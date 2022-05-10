@@ -17,7 +17,7 @@ $link = mysqli_connect("localhost", "root", "", "movie_database");
 ?>
 
 <head>
-    <title>Checkout</title>
+    <title>Checkout - Ticket-Master</title>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
 </head>
 
@@ -84,7 +84,7 @@ $link = mysqli_connect("localhost", "root", "", "movie_database");
                                     <label class='control-label'></label>
 
                                     <button style="margin:5px;" class='form-control btn btn-primary' name="submit" type='submit'> Continue →</button>
-                                    <button type='button' onclick="window.history.back('-100')" style="margin:5px;" class='form-control btn btn-secondary'> ← Cancel </button>
+                                    <a href="bookings.php"><button type='button' style="margin:5px;" class='form-control btn btn-secondary'> ← Cancel </button></a>
 
                                     <?php
 
@@ -96,7 +96,7 @@ $link = mysqli_connect("localhost", "root", "", "movie_database");
                                         $ccCVC = $_POST["cccvc"];
                                         $ccMonth = $_POST["ccmonth"];
                                         $ccYear = $_POST["ccyear"];
-                                        $hasPayed = True;
+                                        $hasPayed = 1;
 
                                         $insert_query = "INSERT INTO paymentinfo (username, orderNumber, ccName, ccNumber, ccCVC, ccMonth, ccYear) VALUES ('$username', '$order', '$ccName', '$ccNumber', '$ccCVC', '$ccMonth', '$ccYear');";
                                         $result = mysqli_query($link, $insert_query);
