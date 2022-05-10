@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 10, 2022 at 04:21 AM
+-- Generation Time: May 10, 2022 at 07:53 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -36,7 +36,7 @@ CREATE TABLE `bookingtable` (
   `bookingDate` date NOT NULL,
   `showtime` int(4) NOT NULL,
   `quantity` int(11) NOT NULL,
-  `hasPayed` tinyint(1) NOT NULL
+  `hasPayed` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -44,7 +44,9 @@ CREATE TABLE `bookingtable` (
 --
 
 INSERT INTO `bookingtable` (`id`, `username`, `movieTitle`, `theatre`, `type`, `bookingDate`, `showtime`, `quantity`, `hasPayed`) VALUES
-(1, 'testuser', 'Sonic the Hedgehog 2', 'main-hall', '2d', '2022-05-10', 2100, 1, 1);
+(3, 'testuser', 'The Lost City', 'vip-hall', '2D', '2022-05-10', 2030, 2, 1),
+(5, 'testuser', 'The Outfit', 'main-hall', 'IMAX', '2022-05-10', 2030, 1, 0),
+(6, 'testuser', 'X', 'private-hall', '2D', '2022-05-10', 2100, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -122,7 +124,11 @@ CREATE TABLE `paymentinfo` (
 --
 
 INSERT INTO `paymentinfo` (`id`, `username`, `orderNumber`, `ccName`, `ccNumber`, `ccCVC`, `ccMonth`, `ccYear`) VALUES
-(1, 'testuser', 1, 'Test User', '1234 5678 9999', 123, 4, 2025);
+(1, 'testuser', 1, 'sdfsd', '123123', 132, 4, 2025),
+(2, 'testuser', 2, 'fsdf', '123123', 321, 8, 1900),
+(3, 'testuser', 3, 'Test User', '1234 5678 9999', 433, 4, 2025),
+(4, 'testuser', 4, 'Test User', '9999 8765 4321', 321, 6, 2023),
+(5, 'testuser', 6, 'Test User', '5555 4444 3333', 321, 8, 2024);
 
 -- --------------------------------------------------------
 
@@ -188,7 +194,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `bookingtable`
 --
 ALTER TABLE `bookingtable`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `movies_cs`
@@ -200,7 +206,7 @@ ALTER TABLE `movies_cs`
 -- AUTO_INCREMENT for table `paymentinfo`
 --
 ALTER TABLE `paymentinfo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`
